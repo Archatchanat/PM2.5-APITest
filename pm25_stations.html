@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stations</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/homepagestyle.css">
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">API Test</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link"  href="#">หน้าหลัก</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">จุดตรวจวัดคุณภาพอากาศ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">ค่าฝุ่นรายวัน</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  บทความ
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- content -->
+      
+
+      <!-- filter search -->
+      <div class="container mb-5">
+        <div class="row mt-3 mb-3">
+            <div class="col-12">
+                <h4>จุดตรวจวัดคุณภาพอากาศทั้งหมด</h4>
+            <div class="form-filler">
+                <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">เลือกตามจังหวัด :</label>
+                        <div class="col-sm-4 mb-2">
+                            <select class="form-control" id="select-daily-filter">			
+                                <option value=""> เลือกจุดตรวจวัด </option>
+                                                                    <optgroup label="ภาคเหนือ">
+                                                                                                                            <option value="43">น่าน</option>
+                                                                                    <option value="44">พะเยา</option>
+                                                                                    <option value="40">ลำปาง</option>
+                                                                                    <option value="39">ลำพูน</option>
+                                                                                    <option value="41">อุตรดิตถ์</option>
+                                                                                    <option value="45">เชียงราย</option>
+                                                                                    <option value="38">เชียงใหม่</option>
+                                                                                    <option value="42">แพร่</option>
+                                                                                    <option value="46">แม่ฮ่องสอน</option>
+                                                                                                                    </optgroup>
+                                                                    <optgroup label="ภาคกลาง">
+                                                                                                                            <option value="1">กรุงเทพมหานคร</option>
+                                                                                    <option value="49">กำแพงเพชร</option>
+                                                                                    <option value="9">ชัยนาท</option>
+                                                                                    <option value="17">นครนายก</option>
+                                                                                    <option value="58">นครปฐม</option>
+                                                                                    <option value="47">นครสวรรค์</option>
+                                                                                    <option value="3">นนทบุรี</option>
+                                                                                    <option value="4">ปทุมธานี</option>
+                                                                                    <option value="5">พระนครศรีอยุธยา</option>
+                                                                                    <option value="53">พิจิตร</option>
+                                                                                    <option value="52">พิษณุโลก</option>
+                                                                                    <option value="7">ลพบุรี</option>
+                                                                                    <option value="2">สมุทรปราการ</option>
+                                                                                    <option value="60">สมุทรสงคราม</option>
+                                                                                    <option value="59">สมุทรสาคร</option>
+                                                                                    <option value="10">สระบุรี</option>
+                                                                                    <option value="8">สิงห์บุรี</option>
+                                                                                    <option value="57">สุพรรณบุรี</option>
+                                                                                    <option value="51">สุโขทัย</option>
+                                                                                    <option value="48">อุทัยธานี</option>
+                                                                                    <option value="6">อ่างทอง</option>
+                                                                                    <option value="54">เพชรบูรณ์</option>
+                                                                                                                    </optgroup>
+                                                                    <optgroup label="ภาคตะวันออกเฉียงเหนือ">
+                                                                                                                            <option value="34">กาฬสินธุ์</option>
+                                                                                    <option value="28">ขอนแก่น</option>
+                                                                                    <option value="25">ชัยภูมิ</option>
+                                                                                    <option value="36">นครพนม</option>
+                                                                                    <option value="19">นครราชสีมา</option>
+                                                                                    <option value="77">บึงกาฬ</option>
+                                                                                    <option value="20">บุรีรัมย์</option>
+                                                                                    <option value="32">มหาสารคาม</option>
+                                                                                    <option value="37">มุกดาหาร</option>
+                                                                                    <option value="24">ยโสธร</option>
+                                                                                    <option value="33">ร้อยเอ็ด</option>
+                                                                                    <option value="22">ศรีสะเกษ</option>
+                                                                                    <option value="35">สกลนคร</option>
+                                                                                    <option value="21">สุรินทร์</option>
+                                                                                    <option value="31">หนองคาย</option>
+                                                                                    <option value="27">หนองบัวลำภู</option>
+                                                                                    <option value="26">อำนาจเจริญ</option>
+                                                                                    <option value="29">อุดรธานี</option>
+                                                                                    <option value="23">อุบลราชธานี</option>
+                                                                                    <option value="30">เลย</option>
+                                                                                                                    </optgroup>
+                                                                    <optgroup label="ภาคตะวันตก">
+                                                                                                                            <option value="56">กาญจนบุรี</option>
+                                                                                    <option value="50">ตาก</option>
+                                                                                    <option value="62">ประจวบคีรีขันธ์</option>
+                                                                                    <option value="55">ราชบุรี</option>
+                                                                                    <option value="61">เพชรบุรี</option>
+                                                                                                                    </optgroup>
+                                                                    <optgroup label="ภาคตะวันออก">
+                                                                                                                            <option value="13">จันทบุรี</option>
+                                                                                    <option value="15">ฉะเชิงเทรา</option>
+                                                                                    <option value="11">ชลบุรี</option>
+                                                                                    <option value="14">ตราด</option>
+                                                                                    <option value="16">ปราจีนบุรี</option>
+                                                                                    <option value="12">ระยอง</option>
+                                                                                    <option value="18">สระแก้ว</option>
+                                                                                                                    </optgroup>
+                                                                    <optgroup label="ภาคใต้">
+                                                                                                                            <option value="64">กระบี่</option>
+                                                                                    <option value="69">ชุมพร</option>
+                                                                                    <option value="72">ตรัง</option>
+                                                                                    <option value="63">นครศรีธรรมราช</option>
+                                                                                    <option value="76">นราธิวาส</option>
+                                                                                    <option value="74">ปัตตานี</option>
+                                                                                    <option value="65">พังงา</option>
+                                                                                    <option value="73">พัทลุง</option>
+                                                                                    <option value="66">ภูเก็ต</option>
+                                                                                    <option value="75">ยะลา</option>
+                                                                                    <option value="68">ระนอง</option>
+                                                                                    <option value="70">สงขลา</option>
+                                                                                    <option value="71">สตูล</option>
+                                                                                    <option value="67">สุราษฎร์ธานี</option>
+                                                                                                                    </optgroup>
+                                                                    <optgroup label="อื่นๆ">
+                                                                                                                            <option value="78">อื่นๆ</option>
+                                                                                                                    </optgroup>
+                                                                </select>
+                        </div>
+                        <div class="col-sm-2 mb-2"><button class="btn btn-info" id="btn-daily-filter"><i class="fa fa-filter" aria-hidden="true"></i> กรองข้อมูล</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      <table>
+        <tr>
+            <th>#</th>
+            <th>จุดตรวจวัด</th>
+            <th>PM 2.5 (μg/m3)</th>
+        </tr>
+        <tbody class="tbody">
+
+        </tbody>
+      </table>
+
+      
+
+      
+    <!-- call script js -->
+    <script src="script.js"></script>
+    <!-- js bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+</body>
+</html>
